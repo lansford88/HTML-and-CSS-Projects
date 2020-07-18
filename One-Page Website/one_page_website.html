@@ -4,6 +4,7 @@
         <title>The Brother Test</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/one_page_website.css">
+        <script src="./JS/one_page_website.js"></script>
     </head>
     <body>
 
@@ -31,25 +32,68 @@
         </div>
         <!--End of History Section-->
 
-        <!--Gallery Section-->
-
-        <div id="gallery">
-                <h1>Gallery</h1>
-
-         <!-- Photo's of Itachi-->
-                <h2>Itachi Uchiha</h2>
-                <table style="width: 75%;">
-                    <tr>
-                        <td>
-                            <img src="./images/Itachi_1.jpg" width="375" height="375" alt="Itachi Uchiha">     
-                        </td>
-                        <td>
-                            <img src="./images/Itachi_2.jpg" width="375" height="375" alt="Itachi Uchiha">
-                        </td>
-                    </tr>
-                </table>
+        <!--LightBox  Section All of these images will be used to OPEN the lightbox (these will be the ones you click on ) -->
+        <div class="row">
+            <div class="column">
+                <img id="mainpic" src="./images/Eyes.png" style="width: 100%" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            
         </div>
-        <!--End of Itachi Photo Section-->
+
+        <!-- This will be the Modal/Lightbox Itself-->
+        <div id="myModal"   class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+            
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="./images/Itachi_main.jpg" style="width: 100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="./images/Itachi_1.jpg" style="width: 100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="./images/Itachi_2.jpg" style="width: 100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="./images/Itachi_3.jpg" style="width: 100%">
+                    </div>
+
+                    <!--Next/previous controls-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!--Caption Text-->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!--Controls for the Thumbnail images-->
+                    <div class="column">
+                        <img class="Moddemo" src="./images/Itachi_main.jpg" onclick="currentSlide(1)" style="width: 100%" alt="Itachi1">
+                    </div>
+
+                    <div class="column">
+                        <img class="Moddemo" src="./images/Itachi_1.jpg" onclick="currentSlide(2)" style="width: 100%" alt="Itachi2">
+                    </div>
+
+                    <div class="column">
+                        <img class="Moddemo" src="./images/Itachi_2.jpg" onclick="currentSlide(3)" style="width: 100%" alt="Itachi3">
+                    </div>
+
+                    <div class="column">
+                        <img class="Moddemo" src="./images/Itachi_3.jpg" onclick="currentSlide(4)" style="width: 100%" alt="Itachi4">
+                    </div>
+
+            </div>
+        </div>
 
         <!--Itachi's Form-->
         <div class="Itachi-form-container">
