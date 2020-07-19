@@ -1,5 +1,20 @@
+html {
+    background-color: black;
+}
+
 body    {
     margin:0%;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+h1 {
+    font-size: 3vw;     /*Sets the percentage of size to the viewport */
 }
 
 .Navbar {

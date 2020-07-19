@@ -5,10 +5,12 @@
         <meta charset="utf-8">
         <title>Ryan Lansford's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
 
 <body class="Background">
-
+    <script>document.body.className += 'fade-out';</script>
 
     <div class="Navbar">
         <a class="active" href="#home">Home</a>
@@ -95,7 +97,9 @@
             <br><center>&copy Ryan Lansford</center>
         </p>
     </footer>
-
+$(function() {
+    $('body').removeClass('fade-out');
+});
 
 </body>
 
