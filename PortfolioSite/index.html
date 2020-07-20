@@ -1,106 +1,171 @@
 <!DOCTYPE html>
 <html>
 
+    <!-- My Head Area-->
     <head>
         <meta charset="utf-8">
-        <title>Ryan Lansford's Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+        <title> Ryan Lansford's Portfolio Site</title>
+        <link rel="stylesheet" type="text/css" href="./Css/portfolio.css">
+        
     </head>
 
-<body class="Background">
-    <script>document.body.className += 'fade-out';</script>
+    <!-- My Body Area-->
+    <body class="Background">
 
-    <div class="Navbar">
-        <a class="active" href="#home">Home</a>
-        <a href="#About">About</a>
-        <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
-    </div>
+    <!-- Nav Bar-->
+        <div class="NavBar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
 
-<!--POTENTIALLY ADD BREAKS HERE TO MOVE SOME ROOM FROM THE NAV BAR-->
-<br>
+    <!--Home Section-->
+        <div id="Home">
+            <br> 
+            <br>    <!-- Just adding some space here-->
+    <!--Video-->
 
-<!-- Video-->
-    <div id="home">
-        <video autoplay muted loop id="World_Spin">
-            <source src="./videos/world_spin.mp4" type="video/mp4">
-        </video>
-    </div>
+            <video autoplay muted loop id="PlanetSpin"> 
+                <source src="./videos/World_Spin.mp4" type="video/mp4">
+                Your browser does not support HTML5 video. 
+            </video>
+        </div>
+    <!--Vid Text-->
+        <div class="Video_Text">
+                <h1 style="color:white;">Ryan Lansford's Portfolio</h1>
+                    <p>
+                        <strong>
+                                    <center>
+                                            <q>Anyone who has never made a mistake has never tried anything new.</q>
+                                            <br>-Albert Einstein<br>
+                                            <br>
+                                            My name is Ryan Lansford, I appreciate you taking the time to look at some of the work that I have been doing.
+                                            <br> Thank you for stopping by and enjoy!
 
-<!-- Placing Text over the Video-->
-    <div class="Video_Text">
-            <h1 style="color: white;">Ryan Lansford's Portfolio</h1>
-                <p>
-                    <strong>
-                        <center>
-                            <q>Anyone who has never made a mistake has never tried anything new.</q>
-                            <br>-Albert Einstein<br>
-                            My name is Ryan Lansford, I appreciate you taking the time to look at some of the work that I've been doing. 
-                            <br> Thank you for stopping by and enjoy!<br>
-                        </center>
-                    </strong>
-                </p>
-    </div>
+                                    </center>
+                        </strong>
+                    </p>
+        </div>
 
-<!--About Section-->
-    <div class="Row" id="About">
-            <div class="Column_2">
-                <img src="./images/Lightbulb.jpg" alt="LightBulb">
+    <!--SlideShow Sections-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">1 / 6</div>
+                                <img class="Slide_Show_Images" src="./Css/images/Self_Image2.jpg" style="width: 100%">
+                                    <div class="text">I am available to assist you on your projects!</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">2 / 6</div>
+                                <img class="Slide_Show_Images" src="./css/images/Images/HTML_CSS_and_JavaScript.jpeg" style="width: 100%">
+                                    <div class="text">I am a full-stack software developer<br> trained in :<br>HTML, CSS and JavaScript!</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">3 / 6</div>
+                                <img class="Slide_Show_Images" src="./Css/images/Images/Python.png" style="width: 100%">
+                                    <div class="text">Also the popular programming language Python,</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">4 / 6</div>
+                                <img class="Slide_Show_Images" src="./Css/images/Images/C_Sharp_and_Dot_NET.png" style="width: 100%">
+                                    <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">5 / 6</div>
+                                <img class="Slide_Show_Images" src="./Css/images/Images/SQL_and_Database.jpg" style="width: 100%">
+                                    <div class="text">Back end development, databases and SQL.</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="Slide_Number">6 / 6</div>
+                                <img class="Slide_Show_Images" src="./Css/images/Images/Coding_1.jpg" style="width: 100%">
+                                    <div class="text">
+                                        <a onclick="openForm()" href="#Contact" style="color: white;">Contact me!</a>
+                                    </div>
+                            </div>
+                        
+                                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                    <br>
+                        <div style="text-align: center;">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                        </div>
+                </div>
+        </div>
+
+        <!---ABOUT SECTION-->
+
+        <div class="Row" id="About">
+            <div class="Column_2">                  <!--This will represent the left column-->
+                <img src="./Css/images/Lightbulb.jpg" alt="Bulb">
             </div>
 
-            <div class="Column_1">
+            <div class="Column_1">                  <!--This will represent the right column-->
                 <h1>About</h1>
-                    <p> I am a Junior Software Developer who enjoys problem solving and finding answers outside of the box.<br><br>I will be a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s dedicated Software Developer Boot Camp, trained and experienced in the following web program languages: HTML, CSS, JavaScript, SQL, C# and more.<br><br> As a full-stack developer and would love to work with you on your projects.<a href="#Contact">Contact</a> me below!</p>  
-                    
+                <p>I am a software developer who loves to code! As a father of two, I enjoy time with my family and traveling. <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!</p>
             </div>
-    </div>
-
-<!--GitSection-->
-    <div class="Row" id="GitHub">
-        <div class="Column_1">
-            <h1>GitHub</h1>
-                <p>You can view my coding projects on my GitHub profile here:<br>
-                <center><a href="https://github.com/lansford88" target="_blank">Ryan Lansford's GitHub</a></center></p>
-            
         </div>
 
-        <div class="Column_2">
-            <a href="https://github.com/lansford88" target="_blank"><img src="./images/github-logo.png" alt="GitHub"></a>
+    <!--GitHub Section-->
+        <div class="Row" id="GitHub">
+            <div class="Column_1">
+                    <h1>GitHub</h1>
+                        <p> You can view my projects on my GitHub profile here:<br>
+                        <center><a href="https://github.com/lansford88" target="_blank">Ryan Lansford's GitHub</a></center>
+                        </p>
+            </div>
+
+            <div class="Column_2">
+                    <a href="https://github.com/lansford88" target="_blank"><img src="./Css/images/github-logo.png" alt="GitHub"></a>
+            </div>
         </div>
-    </div>
 
-<!--Contact Section-->
-    <div class="Row" id="Contact">
-        <div class="Column_3">
-            <img src="./images/Contact_me.jpg" alt="Contact_Image">
+    <!-- Contact Section -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+                <div class="form-popup" id="myForm">
+                    <form action="https://formspree.io/rplansford@gmail.com" method="POST" class="form-container">
+                        <h1>Contact</h1>
+                            <label for="name"><b>Name</b></label>
+                                <input type="text" placeholder="Type your name here" name="name" required>
+                            <label for="phone"><b>Phone</b></label>
+                                <input type="text" placeholder="Enter your phone number here" name="phone">
+                            <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Type your email address here" name="email" required>
+                            <label for="message"><b>Message</b></label>
+                                <input type="text" placeholder="Type your message here" name="message">
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                    </form>
+                </div>
         </div>
+<!--Footer Section-->
+        <footer>
+            <p>
+                <center>&copy Ryan Lansford.com</center>
+            </p>
+        </footer>
 
-        <div class="Column_1">
-            <h1>Contact</h1>
-                <form action="" method="get">
-                    <label>Name</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message</label>
-                        <input type="text" id"Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="Submit">
-                </form>
-        </div>
-    </div>
+        
 
 
-    <footer>
-        <p>
-            <br><center>&copy Ryan Lansford</center>
-        </p>
-    </footer>
-$(function() {
-    $('body').removeClass('fade-out');
-});
 
-</body>
+        <script src="./JS/Port.js"></script>
+    </body>
 
 </html>
